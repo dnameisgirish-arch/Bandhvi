@@ -42,7 +42,7 @@ import React, { useState, useEffect } from 'react';
             isSticky ? 'fixed top-0 bg-bandhvi-dark-brown shadow-lg' : 'relative bg-transparent'
           }`}
         >
-          <nav className="container mx-auto px-4 py-4 flex items-center justify-between">
+          <nav className="container mx-auto px-4 py-6 flex items-center justify-between"> {/* Increased py-6 for more vertical space */}
             {/* Mobile Menu Trigger */}
             <div className="lg:hidden">
               <Sheet>
@@ -54,8 +54,8 @@ import React, { useState, useEffect } from 'react';
                 <SheetContent side="left" className="bg-bandhvi-dark-brown text-bandhvi-off-white border-bandhvi-medium-brown">
                   <div className="flex flex-col space-y-6 p-4">
                     <div className="flex items-center justify-center mb-6">
-                      {/* Use Logo component for mobile menu */}
-                      <Logo iconClassName="h-8 w-8" textClassName="text-2xl" />
+                      {/* Use Logo component for mobile menu, smaller size, no tagline */}
+                      <Logo size="md" showTagline={false} />
                     </div>
                     {navItems.map((item) => (
                       <a
@@ -81,8 +81,8 @@ import React, { useState, useEffect } from 'react';
 
             {/* Logo */}
             <div className="flex items-center justify-center lg:justify-start flex-grow lg:flex-grow-0">
-              {/* Use Logo component for main header */}
-              <Logo />
+              {/* Use Logo component for main header, larger size with tagline */}
+              <Logo size="lg" showTagline={true} />
             </div>
 
             {/* Desktop Navigation */}

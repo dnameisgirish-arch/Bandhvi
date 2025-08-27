@@ -1,4 +1,5 @@
 import React from 'react';
+    import { Button } from '@/components/ui/button'; // Import the Button component
 
     interface SuitCardProps {
       image: string;
@@ -14,10 +15,16 @@ import React from 'react';
             alt={alt}
             className="w-full h-96 object-cover object-center transition-transform duration-500 group-hover:scale-110"
           />
-          <div className="absolute inset-0 bg-black/40 flex items-end p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-            <h3 className="text-2xl font-serif font-semibold text-bandhvi-off-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-300 delay-100">
+          <div className="absolute inset-0 bg-black/40 flex flex-col items-center justify-end p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            <h3 className="text-2xl font-serif font-semibold text-bandhvi-off-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-300 delay-100 mb-4">
               {title}
             </h3>
+            <Button
+              variant="default"
+              className="bg-white text-black hover:bg-gray-200 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300 delay-200 px-8 py-2 rounded-md"
+            >
+              View More
+            </Button>
           </div>
         </div>
       );
